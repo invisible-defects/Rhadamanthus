@@ -1,0 +1,70 @@
+.bg-image {
+    background-image: url("/img/bg.gif");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    margin: 40px;
+    height: 100%;
+    padding: 1em;
+    border: 3px solid #181a1a;
+    background-color: transparent;
+
+    font-family: 'Underdog', cursive;
+    color: #181a1a;
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+select {
+    margin: 40px;
+    height: 100%;
+    padding: 1em;
+    border: 3px solid #181a1a;
+    background-color: transparent;
+    background: transparent;
+    appearance: none;
+    overflow: hidden;
+
+    font-family: 'Underdog', cursive;
+    color: #181a1a;
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+option{
+    color:aliceblue;
+    background-color: #181a1a;
+}
+
+.main-content {
+    font-family: 'Underdog', cursive;
+    color: #181a1a;
+    font-weight: bold;
+    font-size: 40px; 
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main-box">
+        <div>
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.subject.label }}<br>
+                    {{ form.subject() }}
+                </p>
+                <p>
+                    {{ form.action.label }}<br>
+                    {{ form.action(size=64) }}
+                </p>
+                <p>{{ form.submit() }}</p>
+            </form>
+            Ваша карма: {{ karma }}
+        </div>
+
+        <div>
+            <img src="/img/rad.gif" alt="RADAMANTH" style="height:80%;">
+        </div>
+    </div>
+{% endblock %}

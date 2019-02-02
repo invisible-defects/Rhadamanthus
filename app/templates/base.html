@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Underdog" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css?version=1662">
         {% if title %}
         <title>{{ title }}</title>
         {% else %}
@@ -7,6 +9,7 @@
         {% endif %}
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <div class="bg-image"></div>
+        <div class="main-content">{% block content %}{% endblock %}</div>
     </body>
 </html>
