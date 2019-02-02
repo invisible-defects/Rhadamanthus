@@ -22,7 +22,7 @@ def index():
                 karma+=1
             if word in ploh:
                 karma-=1
-        current_user.karma += karma
+        (User.query.filter_by(id=form.subject.data)).first().karma += karma
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('index.html', title='Логово Радаманта', form=form, karma=current_user.karma)
@@ -35,11 +35,10 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(name=form.name.data, surname=form.surname.data).first()
         if user is None:
-            flash("Ты не из Поведников, уходи!")
-            return redirect(url_for('login'))
+            return render_template('login.html', title='Ваша лодка уже готова', form=form, badlogin="Ты не из Поведников, уходи!")
         login_user(user)
         return redirect(url_for('index'))
-    return render_template('login.html', title='Ваша лодка уже готова', form=form)
+    return render_template('login.html', title='Ваша лодка уже готова', form=form, badlogin="")
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
