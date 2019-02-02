@@ -1,5 +1,5 @@
 .bg-image {
-    background-image: url("/img/bg.gif");
+    background-image: url("/img/bg.jpg?version=2");
     filter: blur(8px);
     -webkit-filter: blur(8px);
 
