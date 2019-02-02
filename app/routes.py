@@ -15,7 +15,7 @@ def index():
     if form.validate_on_submit():
         print("Gotcha")
         return redirect(url_for('index'))
-    return render_template('index.html', title='Логово Радаманта', form=form, karma=0)
+    return render_template('index.html', title='Логово Радаманта', form=form, karma=current_user.karma)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

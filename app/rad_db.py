@@ -5,7 +5,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, index=True)
     surname = db.Column(db.String(64), index=True)
-    carma = db.Column(db.String(64), index=True)
+    karma = db.Column(db.Integer, default=0)
 
     def __repr__(self):
         return '<User {}>'.format(self.name)
